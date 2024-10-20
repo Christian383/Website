@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ihr Partner für erfolgreiche ISO-Zertifizierungen und interne Audits">
+    <meta name="keywords" content="ISO 9001, ISO 27001, Audits, Zertifizierung, interne Audits">
+    <title>Audit-Beratung - Ihr Partner für Zertifizierungen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Audit-Beratung</div>
+            <ul class="nav-links">
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#testimonials">Referenzen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ihr Partner für erfolgreiche ISO-Zertifizierungen</h1>
+            <p>Professionelle interne Audits und Zertifizierungsvorbereitung für Ihr Unternehmen.</p>
+            <a href="#contact" class="cta">Kostenlose Erstberatung</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Über mich</h2>
+        <p>Ich bin B. Eng. im Bereich Wirtschaftsingenieurwesen mit Schwerpunkt Qualitätsmanagement, TÜV Auditor für ISO 27001 und unterstütze Unternehmen dabei, Zertifizierungsprozesse effizient zu gestalten.</p>
+        <p>Mit meiner langjährigen Erfahrung als Auditor und Berater begleite ich Sie durch interne Audits und bereite Ihr Unternehmen optimal auf Zertifizierungen vor.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Leistungen</h2>
+        <div class="service">
+            <h3>Interne Audits</h3>
+            <p>Professionelle Durchführung interner Audits nach ISO 9001 und ISO 27001.</p>
+        </div>
+        <div class="service">
+            <h3>Zertifizierungsvorbereitung</h3>
+            <p>Vorbereitung auf Zertifizierungs-, Rezertifizierungs- und Überwachungsaudits.</p>
+        </div>
+        <div class="service">
+            <h3>Externe Auditierung</h3>
+            <p>Unabhängige, externe Audits zur Überprüfung Ihrer Managementsysteme.</p>
+        </div>
+        <div class="service">
+            <h3>Schulung und Beratung</h3>
+            <p>Schulungen und Beratungen für Ihre Mitarbeiter im Bereich Qualitäts- und Informationssicherheitsmanagement.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Referenzen</h2>
+        <p>"Dank der kompetenten Unterstützung verlief unser Zertifizierungsaudit reibungslos." - Max Mustermann</p>
+        <p>"Die externen Audits haben uns geholfen, unsere Prozesse deutlich zu verbessern." - Sabine Müller</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Kontakt</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Absenden</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Audit-Beratung. Alle Rechte vorbehalten.</p>
+        <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+    </footer>
+
+</body>
+</html>
