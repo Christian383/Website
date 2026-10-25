@@ -18,13 +18,15 @@ Tests der Auswahl und der Karten (im Hauptordner des Repos)
 npm test
 ```
 
-## Auf Cloudflare Pages veröffentlichen
+## Auf Cloudflare veröffentlichen
 
-1. Im Cloudflare Dashboard Workers und Pages öffnen, Pages wählen und das GitHub Repo verbinden.
-2. Branch wählen.
-3. Framework preset `None`, Build command leer lassen.
-4. Build output directory `schachschritt`.
-5. Speichern und deployen. Jeder Push auf den Branch veröffentlicht neu.
+Die App läuft als Cloudflare Worker mit statischen Dateien. Die Datei `wrangler.jsonc` im Hauptordner sorgt dafür, dass nur der Ordner `schachschritt` hochgeladen wird.
+
+1. Im Cloudflare Dashboard Workers & Pages öffnen, Create application wählen und das GitHub Repo importieren.
+2. Production branch `main`, Deploy command `npx wrangler deploy`, Build command leer.
+3. Deployen. Jeder Push auf `main` veröffentlicht neu.
+
+Die Adresse lautet `https://schachschritt.<dein-konto>.workers.dev` und steht im Dashboard beim Worker.
 
 ## Auf dem iPhone installieren
 
