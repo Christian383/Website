@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "schachschritt",
+  "compatibility_date": "2026-10-19",
+  // Nur die PWA veröffentlichen, nicht das ganze Repo.
+  "assets": {
+    "directory": "./schachschritt"
+  }
+}
