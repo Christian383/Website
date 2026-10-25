@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mein nächster Schachschritt</title>
+  <meta name="description" content="Ein Knopf, ein sinnvoller Trainingsvorschlag für dein Schach.">
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161a17" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Schachschritt">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="app.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Mein nächster Schachschritt</h1>
+
+    <fieldset class="time">
+      <legend>Wie viel Zeit hast du?</legend>
+      <div class="segmented">
+        <label><input type="radio" name="minutes" value="5"><span>5 Min</span></label>
+        <label><input type="radio" name="minutes" value="15"><span>15 Min</span></label>
+        <label><input type="radio" name="minutes" value="30"><span>30 Min</span></label>
+      </div>
+    </fieldset>
+
+    <button type="button" id="draw" class="primary">Was trainiere ich heute?</button>
+
+    <article id="card" class="card" hidden aria-live="polite">
+      <p class="meta"><span id="card-category"></span> · <span id="card-minutes"></span></p>
+      <h2 id="card-title" tabindex="-1"></h2>
+      <p id="card-why" class="why"></p>
+      <ol id="card-steps" class="steps"></ol>
+      <div class="finish">
+        <p class="finish-label">Abschluss</p>
+        <p id="card-done"></p>
+      </div>
+      <p id="card-link" class="link" hidden><a target="_blank" rel="noopener"></a></p>
+    </article>
+
+    <div id="actions" class="actions" hidden>
+      <button type="button" id="done" class="secondary">Erledigt</button>
+      <button type="button" id="other" class="secondary">Anderer Vorschlag</button>
+    </div>
+
+    <p id="status" class="status" role="status"></p>
+  </main>
+</body>
+</html>
