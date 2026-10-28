@@ -43,8 +43,15 @@ function showNext() {
   save();
   $('status').textContent = '';
   render();
+  $('card').scrollTop = 0;
+  updateMoreHint();
   $('card-title').focus({ preventScroll: true });
-  $('card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Blendet den Kartentext unten aus, solange darunter noch etwas kommt.
+function updateMoreHint() {
+  const card = $('card');
+  card.classList.toggle('more', card.scrollTop + card.clientHeight < card.scrollHeight - 4);
 }
 
 function markDone() {
@@ -62,6 +69,8 @@ function render() {
   }
 
   const card = CARDS.find((c) => c.id === state.current && c.minutes === state.minutes);
+  // Mit Karte übernimmt „Anderer Vorschlag“ die Rolle des großen Knopfs. So bleibt mehr Platz für die Karte.
+  $('draw').hidden = !!card;
   $('card').hidden = !card;
   $('actions').hidden = !card;
   if (!card) return;
@@ -97,8 +106,11 @@ for (const input of document.querySelectorAll('input[name="minutes"]')) {
 $('draw').addEventListener('click', showNext);
 $('other').addEventListener('click', showNext);
 $('done').addEventListener('click', markDone);
+$('card').addEventListener('scroll', updateMoreHint, { passive: true });
+window.addEventListener('resize', updateMoreHint);
 
 render();
+updateMoreHint();
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(() => {});
