@@ -1,6 +1,6 @@
 // Offline Start: alle App Dateien beim Installieren cachen, danach aus dem Cache liefern.
 // Bei jeder Änderung an den App Dateien die Versionsnummer erhöhen.
-const CACHE = 'schachschritt-v1';
+const CACHE = 'schachschritt-v2';
 const FILES = [
   './',
   './app.css',
